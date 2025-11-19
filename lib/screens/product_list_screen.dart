@@ -7,6 +7,7 @@ class ProductListScreen extends StatefulWidget {
   const ProductListScreen({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _ProductListScreenState createState() => _ProductListScreenState();
 }
 
