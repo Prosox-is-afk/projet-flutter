@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/product.dart';
 import '../services/product_api.dart';
-// ignore: unused_import
 import 'product_detail_screen.dart';
 
 class ProductListScreen extends StatefulWidget {
