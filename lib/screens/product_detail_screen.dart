@@ -9,21 +9,22 @@ class ProductDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(product.name)),
+      appBar: AppBar(title: Text(product.title)),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.network(
-              product.imageUrl,
-              width: double.infinity,
-              height: 200,
-              fit: BoxFit.cover,
-            ),
+            if (product.imageUrl.isNotEmpty)
+              Image.network(
+                product.imageUrl,
+                width: double.infinity,
+                height: 200,
+                fit: BoxFit.cover,
+              ),
             const SizedBox(height: 16),
             Text(
-              product.name,
+              product.title,
               style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
